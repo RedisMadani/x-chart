@@ -1,34 +1,34 @@
-<p align="center"><a href="https://RedisMadani.github.io" target="_blank" rel="noopener noreferrer"><img width="100" src="https://RedisMadani.github.io/logo.png" alt="X-Chart logo"></a></p>
+<p align="center"><a href="https://seerline.github.io" target="_blank" rel="noopener noreferrer"><img width="100" src="https://seerline.github.io/logo.png" alt="XChart logo"></a></p>
 
-# X-Chart - A Tool for Drawing Stock Graphs
+# XChart - A Tool for Drawing Stock Graphs
 
 [![License](https://img.shields.io/apm/l/vim-mode.svg?style=plastic)](https://opensource.org/licenses/MIT)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![npm](https://img.shields.io/npm/v/X-Chart.svg)](https://www.npmjs.com/package/X-Chart) [![Code Climate](https://img.shields.io/codeclimate/maintainability/RedisMadani/X-Chart.svg)](https://codeclimate.com/github/RedisMadani/X-Chart)
+[![npm](https://img.shields.io/npm/v/XChart.svg)](https://www.npmjs.com/package/XChart) [![Code Climate](https://img.shields.io/codeclimate/maintainability/seerline/XChart.svg)](https://codeclimate.com/github/seerline/XChart)
 
-X-Chart is a simple cross-platform stock charting tool that utilizes the canvas element.
+XChart is a simple cross-platform stock charting tool that utilizes the canvas element.
 
-Try out the [HTML5 Demo](https://RedisMadani.github.io/X-Chart/samples/), or check out the [React Native Demo](https://github.com/RedisMadani/react-native-X-Chart-demo) and [Wechat Applet Demo](https://github.com/RedisMadani/wechat-applet-X-Chart-demo) for more examples.
+Try out the [HTML5](https://seerline.github.io/XChart/samples/), or check out the [React Native](https://github.com/seerline/react-native-XChart-demo) and [Wechat Applet](https://github.com/seerline/wechat-applet-XChart-demo) for more examples.
 
 ## Installation
 
 ### Manual Download
 
-You can download the latest version of `X-Chart` from the [GitHub releases](https://github.com/RedisMadani/X-Chart/releases/latest).
+You can download the latest version of `XChart` from the [GitHub releases](https://github.com/seerline/XChart/releases/latest).
 
 ### npm
 
 ```bash
-npm install X-Chart --save
+npm install XChart --save
 ```
 
 ### Build From Source
 
-To build X-Chart from source, follow these steps:
+To build XChart from source, follow these steps:
 
 ```shell
-git clone git@github.com:RedisMadani/X-Chart.git
-cd X-Chart
+git clone git@github.com:seerline/XChart.git
+cd XChart
 npm install
 
 # Then to build
@@ -37,36 +37,44 @@ npm run build
 
 ## Documentation
 
-Check out the [English documentation](https://RedisMadani.github.io/X-Chart/) (work in progress) or the [中文文档](https://RedisMadani.github.io/X-Chart/zh/) (in progress) for more information.
+Check out the [English documentation](https://seerline.github.io/XChart/) (work in progress) or the [中文文档](https://seerline.github.io/XChart/zh/) (in progress) for more information.
 
 ## Contributing
 
-To contribute to X-Chart, follow these steps:
+To contribute to XChart, follow these steps:
 
 ```shell
-git clone https://github.com/RedisMadani/X-Chart.git
+git clone https://github.com/seerline/XChart.git
 npm install
 npm run dev
 ```
 
 ## Screenshots
 
-### PC Demo
+### PC
 
-![PC Demo](./screenshot/pc.png)
+![PC](./screenshot/pc.png)
 
-### Web Demo
+### Web
 
-![Web Demo](./screenshot/web.png)
+![Web](./screenshot/web.png)
 
-### Mina Demo
+### Mina
 
-![Mina Demo](./screenshot/mina.png)
+![Mina](./screenshot/mina.png)
 
-### React Native Demo
+### React Native
 
-![React Native Demo](./screenshot/reactnative.png)
+![React Native](./screenshot/reactnative.png)
+
+## Todos
+
+* [ ] Implement karma tests
+* [ ] Add more webs
+* [ ] Integrate [GCanvas](https://github.com/alibaba/GCanvas) for `react native android`
+* [ ] Create a [weex](https://github.com/apache/incubator-weex)
+* [x] Integrate WeChat Mina app
 
 ## License
 
-X-Chart is available under the [MIT license](https://opensource.org/licenses/MIT).
+XChart is available under the [MIT license](https://opensource.org/licenses/MIT).
