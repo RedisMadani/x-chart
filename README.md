@@ -65,14 +65,6 @@ npm run dev
 
 ![React Native Demo](./screenshot/reactnative.png)
 
-## Todos
-
-* [ ] Implement karma tests
-* [ ] Add more web demos
-* [ ] Integrate [GCanvas](https://github.com/alibaba/GCanvas) for `react native android`
-* [ ] Create a [weex](https://github.com/apache/incubator-weex) demo
-* [x] Integrate WeChat Mina app
-
 ## License
 
 X-Chart is available under the [MIT license](https://opensource.org/licenses/MIT).
