@@ -39,7 +39,6 @@
       Chart.clearLayout();
 
       let mainHeight = mainCanvas.height * 2 / 3
-      // 设置画布区域布局
       const mainLayoutCfg = {
         layout: {
           offset: {
@@ -81,8 +80,6 @@
     function paintDrawline() {
       const code = sisdb.code
       const peroid = 'M5'
-      
-      // 应该通过设置数据属性来进行时间转换
 
       let infoData
       Promise.all([
