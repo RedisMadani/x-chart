@@ -71,9 +71,6 @@ html, body, .container {
 </html>
 
 <script>
-  ////////////////////////////////////////////
-  //速度测试
-  ///////////////////////////////////////////
   let _beginTime, _wsTime, _endTime;
   let _logMess = document.getElementById("message");
 
@@ -101,7 +98,6 @@ html, body, .container {
 <script src="./drive.js"></script>
 
 <script>
-// 
   var code = document.getElementById("code-string");
   code.values = client_config_get("code");
 
@@ -132,19 +128,19 @@ html, body, .container {
     
     switch (style) {
       case 'day':
-        initLayout(style); // 初始化布局，每种类型只用一次
+        initLayout(style);
         drawKline(code.values, style);
         break;
       case 'min5':
-        initLayout('min5'); // 初始化布局，每种类型只用一次
+        initLayout('min5');
         drawMinline(code.values, style);
         break;
       case 'min':
-        initLayout(style); // 初始化布局，每种类型只用一次
+        initLayout(style);
         drawMinute(code.values);
         break;
       case 'mday':
-        initLayout(style); // 初始化布局，每种类型只用一次
+        initLayout(style);
         drawMday(code.values);
         break;
       case 'level2':
@@ -154,10 +150,6 @@ html, body, .container {
         break;
     }
   }
-  /////////////////////////////////////////////////////////
-  // 初始化工作，只所以不动态生成canvas是为了兼容不同平台
-  //////////////////////////////////////////////////////////
-  // 开始画图
 
   const mainCanvas = document.getElementById('mainChart');
   const cursorCanvas = document.getElementById('cursorChart');
@@ -180,15 +172,13 @@ html, body, .container {
   client.curChart = 'none';
 
   function initLayout(style) {
-    if (client.curChart === style) return; // 布局不变就不重置了
+    if (client.curChart === style) return;
     console.log(client.Chart);
     client.Chart.clearLayout();
     // client.Chart.clear();
     if (style === 'min') {
-      // 设置画布尺寸
       let mainHeight = mainCanvas.height * 2 / 3
       let mainWidth = Math.max(mainCanvas.width * 0.65, mainCanvas.width - 400)
-      // 设置画布区域布局
       const mainLayoutCfg = {
         layout: ClChart.DEF_CHART.CHART_LAYOUT,
         config: ClChart.DEF_CHART.CHART_NOW,
@@ -231,7 +221,6 @@ html, body, .container {
     }
     if (style === 'mday') {
       let mainHeight = mainCanvas.height * 2 / 3
-      // 设置画布区域布局
       const mainLayoutCfg = {
         layout: ClChart.DEF_CHART.CHART_LAYOUT,
         config: ClChart.DEF_CHART.CHART_MDAY,
@@ -261,7 +250,6 @@ html, body, .container {
     }
     if (style === 'day' || style === 'min5') {
       let mainHeight = mainCanvas.height * 2 / 3
-      // 设置画布区域布局
       const mainLayoutCfg = {
         layout: {
           offset: {
@@ -304,12 +292,9 @@ html, body, .container {
     client.tradeDate = 20190419;
   }
 
-  // 画分钟线
   function drawMinute(code) {
     // console.log('Draw ====> Min Line')
-    // 清除画布，及数据
     client.Chart.clear();
-    // 初始化数据
     client.Chart.initData(client.tradeDate, ClChart.DEF_DATA.STOCK_TRADETIME)
 
     send_client_command([{
@@ -336,18 +321,14 @@ html, body, .container {
         client.Chart.setData('MIN', ClChart.DEF_DATA.FIELD_MIN, data['min'].values)
         client.Chart.setData('TICK', ClChart.DEF_DATA.FIELD_TICK, data['tick'].values)
         client.Chart.setData('NOW', ClChart.DEF_DATA.FIELD_NOW, data['now'].values)
-        // 只有pubData才会增补其他信息，并计算所有的线
         client.Chart.bindData(client.Chart.getChart('user.minline'), 'MIN')
         client.Chart.bindData(client.Chart.getChart('user.minvol'), 'MIN')
         client.Chart.onPaint()
       });
   }
-  // 画五日线
   function drawMday(code) {
     console.log('Five Day Line')
-    // 清除画布，及数据
     client.Chart.clear();
-    // 初始化数据
     client.Chart.initData(client.tradeDate, ClChart.DEF_DATA.STOCK_TRADETIME)
 
     send_client_command([{
@@ -374,12 +355,9 @@ html, body, .container {
         client.Chart.onPaint()
       });
   }
-  // 画日线
   function drawKline(code, peroid) {
 
-    // 清除画布，及数据
     client.Chart.clear();
-    // 初始化数据
     client.Chart.initData(client.tradeDate, ClChart.DEF_DATA.STOCK_TRADETIME)
 
     send_client_command([{
@@ -404,9 +382,7 @@ html, body, .container {
 
   function drawMinline(code, peroid) {
 
-    // 清除画布，及数据
     client.Chart.clear();
-    // 初始化数据
     client.Chart.initData(client.tradeDate, ClChart.DEF_DATA.STOCK_TRADETIME)
 
     send_client_command([{
