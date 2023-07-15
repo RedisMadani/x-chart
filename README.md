@@ -1,5 +1,3 @@
-<p align="center"><a href="https://seerline.github.io" target="_blank" rel="noopener noreferrer"><img width="100" src="https://seerline.github.io/logo.png" alt="XChart logo"></a></p>
-
 # XChart - A Tool for Drawing Stock Graphs
 
 [![License](https://img.shields.io/apm/l/vim-mode.svg?style=plastic)](https://opensource.org/licenses/MIT)
