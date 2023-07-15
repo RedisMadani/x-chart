@@ -1,18 +1,8 @@
 # XChart - A Tool for Drawing Stock Graphs
 
-[![License](https://img.shields.io/apm/l/vim-mode.svg?style=plastic)](https://opensource.org/licenses/MIT)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![npm](https://img.shields.io/npm/v/XChart.svg)](https://www.npmjs.com/package/XChart) [![Code Climate](https://img.shields.io/codeclimate/maintainability/seerline/XChart.svg)](https://codeclimate.com/github/seerline/XChart)
-
 XChart is a simple cross-platform stock charting tool that utilizes the canvas element.
 
-Try out the [HTML5](https://seerline.github.io/XChart/samples/), or check out the [React Native](https://github.com/seerline/react-native-XChart-demo) and [Wechat Applet](https://github.com/seerline/wechat-applet-XChart-demo) for more examples.
-
 ## Installation
-
-### Manual Download
-
-You can download the latest version of `XChart` from the [GitHub releases](https://github.com/seerline/XChart/releases/latest).
 
 ### npm
 
