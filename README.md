@@ -1,40 +1,36 @@
-# XChart - A Tool for Drawing Stock Graphs
+# X-Chart - A Tool for Drawing Stock Graphs
 
-XChart is a simple cross-platform stock charting tool that utilizes the canvas element.
+[![License](https://img.shields.io/apm/l/vim-mode.svg?style=plastic)](https://opensource.org/licenses/MIT)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![npm](https://img.shields.io/npm/v/X-Chart.svg)](https://www.npmjs.com/package/X-Chart) [![Code Climate](https://img.shields.io/codeclimate/maintainability/RedisMadani/X-Chart.svg)](https://codeclimate.com/github/RedisMadani/X-Chart)
+
+X-Chart is a simple cross-platform stock charting tool that utilizes the canvas element.
+
+Check out the [React Native](https://github.com/RedisMadani/react-native-X-Chart-demo) and [Wechat Applet](https://github.com/RedisMadani/wechat-applet-X-Chart-demo) for more examples.
 
 ## Installation
+
+### Manual Download
+
+You can download the latest version of `X-Chart` from the [GitHub releases](https://github.com/RedisMadani/X-Chart/releases/latest).
 
 ### npm
 
 ```bash
-npm install XChart --save
+npm install X-Chart --save
 ```
 
 ### Build From Source
 
-To build XChart from source, follow these steps:
+To build X-Chart from source, follow these steps:
 
 ```shell
-git clone git@github.com:seerline/XChart.git
-cd XChart
+git clone git@github.com:RedisMadani/X-Chart.git
+cd X-Chart
 npm install
 
 # Then to build
 npm run build
-```
-
-## Documentation
-
-Check out the [English documentation](https://seerline.github.io/XChart/) (work in progress) or the [中文文档](https://seerline.github.io/XChart/zh/) (in progress) for more information.
-
-## Contributing
-
-To contribute to XChart, follow these steps:
-
-```shell
-git clone https://github.com/seerline/XChart.git
-npm install
-npm run dev
 ```
 
 ## Screenshots
@@ -55,14 +51,6 @@ npm run dev
 
 ![React Native](./screenshot/reactnative.png)
 
-## Todos
-
-* [ ] Implement karma tests
-* [ ] Add more webs
-* [ ] Integrate [GCanvas](https://github.com/alibaba/GCanvas) for `react native android`
-* [ ] Create a [weex](https://github.com/apache/incubator-weex)
-* [x] Integrate WeChat Mina app
-
 ## License
 
-XChart is available under the [MIT license](https://opensource.org/licenses/MIT).
+X-Chart is available under the [MIT license](https://opensource.org/licenses/MIT).
