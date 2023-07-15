@@ -43,7 +43,6 @@
       let mainHeight = minHeight * 6
       let mainWidth = Math.max(mainCanvas.width * 0.65, mainCanvas.width - 2 * minWidth)
       
-      // 设置画布区域布局
       let mainConfig = ClChart.DEF_UTIL.copyJsonOfDeep(ClChart.DEF_CHART.CHART_NOW);
       mainConfig.lines.push(
         {
@@ -117,14 +116,14 @@
         },
         {
           className: 'ClDrawZVBar',
-          extremum: { // 如何取极值
-            method: 'fixedLeft', // fixedLeft fixedRight 上下固定,此时需要取axisY.middle的定义
-            maxvalue: ['zdmr','zdmc','zdjz'], // 参与计算最大值的标签
-            minvalue: ['zdmr','zdmc','zdjz'] // 参与计算最小值的标签
+          extremum: {
+            method: 'fixedLeft', // fixedLeft fixedRight 
+            maxvalue: ['zdmr','zdmc','zdjz'], 
+            minvalue: ['zdmr','zdmc','zdjz'] 
           },
           info: {
             txt: 'IN:',
-            labelY: 'zdmr', // 需要显示的变量，从key中获取对应的数据标签
+            labelY: 'zdmr', 
             format: 'vol'
           }
         },
@@ -132,7 +131,7 @@
           className: 'ClDrawZVBar',
           info: {
             txt: 'OUT:',
-            labelY: 'zdmc', // 需要显示的变量，从key中获取对应的数据标签
+            labelY: 'zdmc',
             format: 'vol'
           }
         }]
@@ -153,14 +152,6 @@
       const reportLayoutCfg = {
         layout: ClChart.DEF_CHART.CHART_LAYOUT,
         config: {
-          // title: {
-          //   display: 'none'
-          // },
-          // listinfo:
-          //  [{label:'time', alignTxt:'left'}, 
-          //   {label:'price'},
-          //   {label:'vol'}
-          // ],
           style: 'normal'
         },
         rectMain: {
@@ -287,7 +278,6 @@
         Chart.setData('MIN', ClChart.DEF_DATA.FIELD_MIN, minData.values)
         Chart.setData('NOW', nowData.fields, nowData.values)
         Chart.setData('reports', reportData.fields, reportData.values)
-        // 数据转换
 
         Chart.setData('minddx', {time:0,zdmr:1,zdmc:2,zdjz:3,
               zdmrp:4,zdmcp:5}, getMinddxline(minddxData, minData))
