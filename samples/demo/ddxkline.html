@@ -91,13 +91,13 @@
         [
         {
           className: 'ClDrawZVBar',
-          extremum: { // 如何取极值
-            method: 'fixedLeft', // fixedLeft fixedRight 上下固定,此时需要取axisY.middle的定义
-            maxvalue: ['zdmr'], // 参与计算最大值的标签
-            minvalue: ['zdmr'] // 参与计算最小值的标签
+          extremum: {
+            method: 'fixedLeft', // fixedLeft fixedRight 
+            maxvalue: ['zdmr'],
+            minvalue: ['zdmr']
           },
           info: {
-            labelY: 'zdmr', // 需要显示的变量，从key中获取对应的数据标签
+            labelY: 'zdmr',
             format: 'vol'
           }
         },
@@ -105,29 +105,29 @@
         //   className: 'ClDrawLine',
         //   info: {
         //     txt: 'ZD:',
-        //     labelY: 'value', // 需要显示的变量，从key中获取对应的数据标签
+        //     labelY: 'value',
         //     format: 'vol'
         //   },
         //   formula: {
-        //     key: 'DDX1', // 获取数据的key，
-        //     command: `out = this.VEMA('zdmr', 60)` // 公式只能输出值到out中
+        //     key: 'DDX1',
+        //     command: `out = this.VEMA('zdmr', 60)`
         //   }
         // },
         {
           className: 'ClDrawLine',
-          // extremum: { // 如何取极值
-          //   method: 'normal', // fixedLeft fixedRight 上下固定,此时需要取axisY.middle的定义
-          //   maxvalue: ['askm6','bidm6'], // 参与计算最大值的标签
-          //   minvalue: ['askm6','bidm6'] // 参与计算最小值的标签
+          // extremum: { 
+          //   method: 'normal',
+          //   maxvalue: ['askm6','bidm6'],
+          //   minvalue: ['askm6','bidm6']
           // },
           info: {
             txt: 'ZD:',
-            labelY: 'value', // 需要显示的变量，从key中获取对应的数据标签
+            labelY: 'value',
             format: 'vol'
           },
           formula: {
-            key: 'DDX4', // 获取数据的key，
-            command: `out = this.SUM('zdmr', 20)` // 公式只能输出值到out中
+            key: 'DDX4',
+            command: `out = this.SUM('zdmr', 20)`
           }
         }]
 
@@ -162,13 +162,10 @@
       ])
       .then(([infoData, ddxData, dayData]) => {
         Chart.clear()
-        // 开市时间和日期可以从exch中获取
         Chart.initData(sisdb.tradeDate, ClChart.DEF_DATA.STOCK_TRADETIME)
-        // 所有来源的数据都应该转换格式后再写入
         Chart.setData('INFO', ClChart.DEF_DATA.FIELD_INFO, infoData.values)
         Chart.setData(peroid, ClChart.DEF_DATA.FIELD_DAY, dayData.values)
 
-        // 数据转换
         let ddxline = []
         let k = 0;
         for (let index = 0; index < ddxData.values.length; index++) {
